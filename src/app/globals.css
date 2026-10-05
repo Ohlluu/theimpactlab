@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   The Impact Lab — design tokens
+   Brand palette supplied by client:
+     olive #506031 · navy #353d65 · brass #b7a35c
+     grey  #6e6c6c · paper #fbf9f9 · sand  #f2d9bf
+   Ramps below are tonal extensions of those exact hues (same H/S,
+   varied L) so every shade still reads as the brand.
+   ------------------------------------------------------------------ */
+
+@theme {
+  /* Olive — hsl(80 32% L). The dominant field colour. */
+  --color-olive-50: #f4f6ef;
+  --color-olive-100: #ebefe1;
+  --color-olive-200: #d1dcbc;
+  --color-olive-300: #adc186;
+  --color-olive-400: #87a253;
+  --color-olive-500: #66793e;
+  --color-olive-600: #506031; /* ← brand */
+  --color-olive-700: #3b4724;
+  --color-olive-800: #333d1f;
+  --color-olive-900: #222815;
+  --color-olive-950: #171b0e;
+
+  /* Navy — hsl(230 31% L). Secondary field, used sparingly. */
+  --color-navy-300: #8e97c4;
+  --color-navy-400: #5d68a0;
+  --color-navy-500: #454e80;
+  --color-navy-600: #353d65; /* ← brand */
+  --color-navy-700: #2a3050;
+  --color-navy-800: #1f243c;
+  --color-navy-900: #151829;
+
+  /* Brass — hsl(47 39% L). The accent. Used like it costs money. */
+  --color-brass-200: #e3dac0;
+  --color-brass-300: #cdbd8d;
+  --color-brass-400: #b7a35c; /* ← brand */
+  --color-brass-500: #9c8945;
+  --color-brass-600: #7c6d37;
+
+  /* Sand — hsl(31 66% L). Warm relief sections. */
+  --color-sand-100: #faf0e6;
+  --color-sand-200: #f2d9bf; /* ← brand */
+  --color-sand-300: #e6c09b;
+
+  /* Neutrals */
+  --color-stone-400: #9b9999;
+  --color-stone-500: #6e6c6c; /* ← brand */
+  --color-stone-600: #565454;
+  --color-paper: #fbf9f9;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --font-display: var(--font-league-spartan);
+  --font-sans: var(--font-roboto);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-olive-950);
+    color: var(--color-paper);
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+
+  /* League Spartan runs loose by default at display sizes. Pull it in. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: var(--color-brass-400);
+    color: var(--color-olive-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass-400);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Eyebrow / label text — the quiet counterpoint to the big display type */
+  .label {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* Tabular index numerals for the 01–07 service list */
+  .numeral {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Entrance animation, opt-in via [data-reveal]. Respects reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.8s var(--ease-out-expo),
+      transform 0.8s var(--ease-out-expo);
+  }
+
+  [data-reveal][data-revealed="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
