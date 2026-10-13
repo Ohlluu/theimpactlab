@@ -26,7 +26,7 @@ export default function ContactPage() {
         lede="Andrea reads every message herself. If your question is really a conversation, booking a call will get you further, faster."
       />
 
-      <section className="relative bg-olive-950 pb-24 md:pb-32 lg:pb-40">
+      <section className="relative field-deep pb-24 md:pb-32 lg:pb-40">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <div className="grid gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24">
             <Reveal>

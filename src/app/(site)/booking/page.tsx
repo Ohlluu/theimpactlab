@@ -26,7 +26,7 @@ export default async function BookingPage({ searchParams }: PageProps<"/booking"
         }
         lede={`Pick an appointment type, choose an open slot, and tell Andrea a little about your organization. Times shown in ${availability.timezoneLabel}.`}
       />
-      <section className="relative bg-olive-950">
+      <section className="relative field-deep">
         <BookingFlow initialTopic={topic} />
       </section>
     </>

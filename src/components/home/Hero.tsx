@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
  */
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-olive-950 pt-32 md:pt-40 lg:pt-44">
+    <section className="relative isolate overflow-hidden field-deep pt-32 md:pt-40 lg:pt-44">
       {/* Oversized bracket, bled off the left edge — the logo motif at
           architectural scale. Decorative only. */}
       <div

@@ -26,14 +26,14 @@ export default function ServicesPage() {
         lede="Most engagements draw on two or three of these. We scope to what your organization can genuinely absorb, not to a package."
       />
 
-      <section className="relative bg-olive-950 pb-24 md:pb-32 lg:pb-40">
+      <section className="relative field-deep pb-24 md:pb-32 lg:pb-40">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <ServicesAccordion services={services} />
         </div>
       </section>
 
       {/* Fit check */}
-      <section className="border-t border-olive-950/10 bg-sand-200 py-24 text-olive-950 md:py-32">
+      <section className="border-t border-olive-950/10 field-sand py-24 text-olive-950 md:py-32">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
             <Reveal>

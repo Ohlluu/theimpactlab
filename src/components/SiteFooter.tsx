@@ -7,7 +7,7 @@ const year = 2026;
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-paper/10 bg-olive-950">
+    <footer className="relative border-t border-paper/10 field-deep">
       {/* Closing call to action */}
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
         <div className="grid gap-14 border-b border-paper/10 py-20 md:py-28 lg:grid-cols-[1.2fr_1fr] lg:gap-20">

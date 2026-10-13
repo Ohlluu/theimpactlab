@@ -57,6 +57,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-olive-950 text-paper">
         {children}
+
+        {/* Grain, over everything, interacting with nothing. Fixed rather
+            than per-section so the texture stays still while the page
+            scrolls — which is how grain behaves on paper, and what stops it
+            reading as a moving overlay. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-0 z-[70] opacity-[0.055] mix-blend-overlay"
+          style={{
+            backgroundImage: "url(/img/grain.png)",
+            backgroundSize: "160px 160px",
+          }}
+        />
       </body>
     </html>
   );

@@ -94,7 +94,82 @@
   }
 }
 
+/* ------------------------------------------------------------------
+   Material layer
+   ------------------------------------------------------------------
+   Three things stop the brand colours reading as flat CSS fills:
+
+   1. Grain — fine noise over everything, `overlay` blend, ~4%. Turns a
+      solid hex into something that looks printed.
+   2. Tonal fields — gradients *within* one hue, never across hues. A
+      cross-hue gradient is the single most recognisable tell of
+      generated design; olive easing into a slightly different olive
+      just reads as light falling across a surface.
+   3. The bracket, tiled large and very faint, as a brand-native
+      background pattern.
+   ------------------------------------------------------------------ */
+
 @layer utilities {
+  /* Tonal fields. Angles vary slightly so consecutive sections don't
+     look like the same gradient stamped twice. */
+  .field-deep {
+    background-color: var(--color-olive-950);
+    background-image: linear-gradient(
+      168deg,
+      #1c2213 0%,
+      #171b0e 44%,
+      #12160a 100%
+    );
+  }
+
+  .field-mid {
+    background-color: var(--color-olive-900);
+    background-image: linear-gradient(
+      192deg,
+      #272e18 0%,
+      #222815 52%,
+      #1d2212 100%
+    );
+  }
+
+  .field-navy {
+    background-color: var(--color-navy-900);
+    background-image: linear-gradient(
+      172deg,
+      #1a1e33 0%,
+      #151829 50%,
+      #111426 100%
+    );
+  }
+
+  .field-sand {
+    background-color: var(--color-sand-200);
+    background-image: linear-gradient(
+      176deg,
+      #f7e7d4 0%,
+      #f2d9bf 55%,
+      #ecceae 100%
+    );
+  }
+
+  /* Brand pattern. Sits under content, over the tonal field. */
+  .pattern-bracket {
+    background-image: url("/img/bracket-tile-light.svg");
+    background-size: 460px 460px;
+  }
+
+  .pattern-bracket-dark {
+    background-image: url("/img/bracket-tile-dark.svg");
+    background-size: 460px 460px;
+  }
+
+  /* Hairline top edge — makes a panel read as raised material rather
+     than a flat rectangle. Most of the difference between "designed"
+     and "coloured in" is this one pixel. */
+  .edge-lit {
+    box-shadow: inset 0 1px 0 0 rgb(251 249 249 / 0.07);
+  }
+
   /* Eyebrow / label text — the quiet counterpoint to the big display type */
   .label {
     font-family: var(--font-sans), system-ui, sans-serif;
@@ -104,7 +179,7 @@
     text-transform: uppercase;
   }
 
-  /* Tabular index numerals for the 01–07 service list */
+  /* Tabular figures — dashboard counters and calendar date chips */
   .numeral {
     font-family: var(--font-display), system-ui, sans-serif;
     font-variant-numeric: tabular-nums;

@@ -9,7 +9,7 @@ import { stats } from "@/content/placeholder";
  */
 export function StatBand() {
   return (
-    <section className="border-y border-paper/10 bg-olive-900">
+    <section className="relative border-y border-paper/10 field-mid edge-lit">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
         <dl className="grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, i) => (

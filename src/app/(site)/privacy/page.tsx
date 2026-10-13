@@ -51,29 +51,24 @@ export default function PrivacyPage() {
         lede="Short version: we use what you give us to talk to you, and nothing else."
       />
 
-      <section className="relative bg-olive-950 pb-24 md:pb-32 lg:pb-40">
+      <section className="relative field-deep pb-24 md:pb-32 lg:pb-40">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <div className="max-w-3xl">
-            <ol className="border-t border-paper/10">
-              {sections.map((s, i) => (
-                <li
+            <div className="border-t border-paper/10">
+              {sections.map((s) => (
+                <section
                   key={s.title}
-                  className="grid gap-4 border-b border-paper/10 py-9 md:grid-cols-[auto_1fr] md:gap-10 md:py-11"
+                  className="border-b border-paper/10 py-9 md:py-11"
                 >
-                  <span className="numeral text-sm font-bold text-brass-400/55">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h2 className="text-2xl leading-tight text-paper md:text-[1.75rem]">
-                      {s.title}
-                    </h2>
-                    <p className="mt-4 text-pretty leading-[1.8] text-paper/65">
-                      {s.body}
-                    </p>
-                  </div>
-                </li>
+                  <h2 className="text-2xl leading-tight text-paper md:text-[1.75rem]">
+                    {s.title}
+                  </h2>
+                  <p className="mt-4 text-pretty leading-[1.8] text-paper/65">
+                    {s.body}
+                  </p>
+                </section>
               ))}
-            </ol>
+            </div>
 
             <p className="mt-12 text-pretty leading-relaxed text-paper/55">
               Questions about any of this? Write to{" "}

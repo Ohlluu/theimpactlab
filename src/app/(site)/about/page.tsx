@@ -27,7 +27,7 @@ export default function AboutPage() {
       />
 
       {/* Portrait + bio */}
-      <section className="relative bg-olive-950 pb-24 md:pb-32 lg:pb-40">
+      <section className="relative field-deep pb-24 md:pb-32 lg:pb-40">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <Reveal className="lg:sticky lg:top-32 lg:self-start">
@@ -132,7 +132,7 @@ export default function AboutPage() {
       </section>
 
       {/* How she works — straight from the brand voice board */}
-      <section className="border-t border-olive-950/10 bg-sand-200 py-24 text-olive-950 md:py-32">
+      <section className="border-t border-olive-950/10 field-sand py-24 text-olive-950 md:py-32">
         <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
           <Reveal>
             <p className="label flex items-center gap-4 text-olive-600">
@@ -155,10 +155,11 @@ export default function AboutPage() {
                   i > 0 ? "border-olive-950/15 lg:border-l" : ""
                 } ${i % 2 === 1 ? "sm:border-l sm:border-olive-950/15 lg:border-l" : ""}`}
               >
-                <span className="numeral text-sm font-bold text-olive-600/60">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="mt-4 text-pretty text-xl leading-tight md:text-[1.4rem]">
+                <span
+                  aria-hidden="true"
+                  className="block h-[7px] w-[7px] rotate-45 bg-olive-600/70"
+                />
+                <h3 className="mt-5 text-pretty text-xl leading-tight md:text-[1.4rem]">
                   {v.name}
                 </h3>
                 <p className="mt-4 text-pretty text-[0.95rem] leading-relaxed text-olive-900/70">

@@ -17,7 +17,7 @@ export function Testimonials() {
   const current = testimonials[active];
 
   return (
-    <section className="relative overflow-hidden bg-navy-900 py-24 md:py-32 lg:py-40">
+    <section className="relative overflow-hidden field-navy py-24 md:py-32 lg:py-40">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -left-32 top-0 h-[520px] w-[520px] rounded-full bg-navy-500/25 blur-[140px]"

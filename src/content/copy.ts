@@ -82,11 +82,41 @@ export const practiceOverview = {
   ],
 } as const;
 
+/**
+ * The seven practice areas sort into four families. This replaced a plain
+ * 01–07 index: a counter on an unordered list is ornament pretending to be
+ * information, and seven of anything numbered reads as filler. Grouping says
+ * something true about how the practice is organised instead.
+ */
+export const families = [
+  {
+    id: "strategy",
+    name: "Strategy",
+    blurb: "Deciding where the money is actually going to come from.",
+  },
+  {
+    id: "capacity",
+    name: "Capacity",
+    blurb: "Building the muscle inside the organization and its board.",
+  },
+  {
+    id: "people",
+    name: "People",
+    blurb: "Supporting the individuals carrying the goal.",
+  },
+  {
+    id: "systems",
+    name: "Systems",
+    blurb: "Making the work survive a busy month and a staffing change.",
+  },
+] as const;
+
+export type FamilyId = (typeof families)[number]["id"];
+
 export type Service = {
   /** Stable id — also the URL hash on /services */
   id: string;
-  /** Display index, 01–07 */
-  index: string;
+  family: FamilyId;
   title: string;
   /** Short line for the home page list */
   summary: string;
@@ -97,49 +127,49 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "fundraising-strategy",
-    index: "01",
+    family: "strategy",
     title: "Fundraising Strategy and Planning",
     summary: "Clarify revenue priorities and build a plan someone actually owns.",
     body: "Assess your current fundraising efforts and develop a focused plan for growth. We help clarify revenue priorities, strengthen your case for support, and create actionable plans with clear responsibilities and timelines.",
   },
   {
     id: "major-gifts",
-    index: "02",
+    family: "strategy",
     title: "Major Gifts and Individual Giving",
     summary: "A sustainable pipeline, from identification through stewardship.",
     body: "Build a sustainable approach to identifying, cultivating, soliciting, and stewarding donors. Services include prospect strategy, donor pipeline development, gift conversations, and personalized engagement plans.",
   },
   {
     id: "foundation-capacity",
-    index: "03",
+    family: "capacity",
     title: "Foundation and Grantee Capacity Building",
     summary: "Capacity-building initiatives designed around what grantees actually need.",
     body: "Partner with foundations to design and deliver capacity-building initiatives that respond to their grantees' needs. Offerings include tailored workshops, learning cohorts, coaching, and technical assistance that strengthen fundraising and organizational effectiveness.",
   },
   {
     id: "board-development",
-    index: "04",
+    family: "capacity",
     title: "Board Development and Engagement",
     summary: "Board members who understand the role — and participate in it.",
     body: "Help board members understand their roles and participate confidently in advancing the mission. Through training, facilitated discussions, and practical tools, we strengthen governance, clarify expectations, and support meaningful fundraising involvement.",
   },
   {
     id: "leadership-coaching",
-    index: "05",
+    family: "people",
     title: "Leadership Coaching and Strategic Advising",
     summary: "Individual support for leaders navigating growth and hard decisions.",
     body: "Provide individualized support to nonprofit executives, development leaders, and fundraisers navigating growth, leadership challenges, and strategic decisions. Coaching combines reflection, practical guidance, and accountability to help leaders move forward with clarity.",
   },
   {
     id: "workshops-retreats",
-    index: "06",
+    family: "people",
     title: "Workshops, Retreats and Learning Experiences",
     summary: "Facilitated sessions people leave with something they can use.",
     body: "Design and facilitate interactive experiences tailored to your team, board, or cohort. Topics include fundraising, donor relationships, leadership, and strategic planning, with tools and next steps participants can apply immediately.",
   },
   {
     id: "stewardship-systems",
-    index: "07",
+    family: "systems",
     title: "Donor Stewardship and Fundraising Systems",
     summary: "Processes that survive a busy month and a staffing change.",
     body: "Create practical processes that support consistent donor engagement and follow-through. We help organizations develop stewardship plans, outreach tools, donor tracking practices, and clear ownership of fundraising activities.",

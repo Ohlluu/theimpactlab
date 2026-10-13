@@ -7,19 +7,25 @@ import { Reveal } from "@/components/Reveal";
  * progress" — rather than invented from scratch. Three steps, because her
  * own sentence has three clauses.
  */
+/**
+ * These three genuinely are sequential, so the order needs to be legible —
+ * but as words on a spine rather than a brass "01". A numbered index is the
+ * most over-used device in template design, and saying "First" out loud is
+ * both warmer and harder to mistake for filler.
+ */
 const steps = [
   {
-    index: "01",
+    marker: "First",
     title: "Understand what is actually happening",
     body: "Your revenue mix, your team's real capacity, and the donor conversations that are — and are not — happening. No assessment theatre. We look at the few things that explain the rest.",
   },
   {
-    index: "02",
+    marker: "Then",
     title: "Clarify priorities and name owners",
     body: "A focused plan with responsibilities and timelines attached to specific people. Specificity is the entire difference between a fundraising plan and a fundraising wish.",
   },
   {
-    index: "03",
+    marker: "After that",
     title: "Build the habit, not the dependency",
     body: "Tools, coaching, and systems your team can run without me. The measure of good consulting is what still works two years after the engagement ends.",
   },
@@ -27,7 +33,7 @@ const steps = [
 
 export function Approach() {
   return (
-    <section className="relative overflow-hidden border-y border-paper/10 bg-olive-900 py-24 md:py-32 lg:py-40">
+    <section className="relative overflow-hidden border-y border-paper/10 field-mid edge-lit py-24 md:py-32 lg:py-40">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-40 bottom-0 h-[500px] w-[500px] rounded-full bg-olive-600/15 blur-[130px]"
@@ -80,23 +86,27 @@ export function Approach() {
             </Reveal>
           </div>
 
-          {/* Steps */}
-          <ol className="space-y-px">
+          {/* Steps, hung off a vertical spine with a brass node at each stop */}
+          <ol className="relative">
+            <span
+              aria-hidden="true"
+              className="absolute bottom-10 left-[3px] top-10 hidden w-px bg-gradient-to-b from-brass-400/50 via-brass-400/25 to-transparent sm:block"
+            />
             {steps.map((step, i) => (
-              <Reveal key={step.index} delay={i * 110} as="li">
-                <div className="group border-t border-paper/10 py-9 last:border-b md:py-12">
-                  <div className="flex items-baseline gap-5 md:gap-8">
-                    <span className="numeral shrink-0 text-base font-bold text-brass-400/60 md:text-lg">
-                      {step.index}
-                    </span>
-                    <div>
-                      <h3 className="text-pretty text-2xl leading-tight text-paper md:text-3xl lg:text-[2.1rem]">
-                        {step.title}
-                      </h3>
-                      <p className="mt-5 max-w-xl text-pretty text-base leading-[1.75] text-paper/60 md:text-[1.05rem]">
-                        {step.body}
-                      </p>
-                    </div>
+              <Reveal key={step.marker} delay={i * 110} as="li">
+                <div className="relative py-9 md:py-12">
+                  <div className="sm:pl-12">
+                    <span
+                      aria-hidden="true"
+                      className="absolute left-0 top-[2.9rem] hidden h-[7px] w-[7px] rotate-45 bg-brass-400 sm:block md:top-[3.9rem]"
+                    />
+                    <p className="label text-brass-400/85">{step.marker}</p>
+                    <h3 className="mt-4 text-pretty text-2xl leading-tight text-paper md:text-3xl lg:text-[2.1rem]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-5 max-w-xl text-pretty text-base leading-[1.75] text-paper/60 md:text-[1.05rem]">
+                      {step.body}
+                    </p>
                   </div>
                 </div>
               </Reveal>

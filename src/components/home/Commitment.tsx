@@ -11,7 +11,7 @@ import { practiceOverview, audiences } from "@/content/copy";
  */
 export function Commitment() {
   return (
-    <section className="relative overflow-hidden bg-sand-200 text-olive-950">
+    <section className="relative overflow-hidden field-sand text-olive-950">
       {/* Bracket, logo orientation, drawn in the olive on the warm field */}
       <div
         aria-hidden="true"
