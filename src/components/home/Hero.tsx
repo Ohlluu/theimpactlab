@@ -53,7 +53,7 @@ export function Hero() {
               <p className="mt-10 max-w-xl text-pretty text-lg leading-[1.75] text-paper/70 md:text-xl md:leading-[1.7]">
                 Their confidence. Their relationships. Their ability to turn
                 ideas into consistent action. The Impact Lab helps nonprofits
-                and foundations build all three — and the systems that keep
+                and foundations build all three, and the systems that keep
                 them going.
               </p>
             </Reveal>

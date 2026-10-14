@@ -250,7 +250,7 @@ export function BookingFlow({ initialTopic }: { initialTopic?: string }) {
                       onClick={() => setDate(firstOpen)}
                       className="mx-auto mt-5 text-sm text-brass-300 underline underline-offset-4 transition-colors hover:text-brass-200"
                     >
-                      Jump to the next opening — {formatLongDate(firstOpen)}
+                      Jump to the next opening: {formatLongDate(firstOpen)}
                     </button>
                   )}
                 </div>

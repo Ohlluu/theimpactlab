@@ -168,7 +168,7 @@ export function smsBody(b: Booking): string {
   const date = d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
   const [h, m] = b.time.split(":").map(Number);
   const time = `${h % 12 === 0 ? 12 : h % 12}:${String(m).padStart(2, "0")}${h >= 12 ? "pm" : "am"}`;
-  return `The Impact Lab: New ${b.typeName} booked — ${b.name}${
+  return `The Impact Lab: New ${b.typeName} booked. ${b.name}${
     b.organization ? ` (${b.organization})` : ""
   }, ${date} at ${time}. ${b.email}`;
 }

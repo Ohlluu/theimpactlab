@@ -107,7 +107,7 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="mt-8 border-l-2 border-brass-400/50 pl-4 text-xs leading-relaxed text-paper/45">
-          <span className="text-brass-400/90">Mockup note —</span> this sign-in
+          <span className="text-brass-400/90">Mockup note:</span> this sign-in
           is a placeholder so you can see the dashboard. Any email and password
           will work. Real authentication is part of the final build.
         </p>

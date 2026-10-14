@@ -19,7 +19,7 @@ const EMPTY: Fields = {
 };
 
 const SUBJECTS = [
-  "General enquiry",
+  "General inquiry",
   "Fundraising strategy",
   "Major gifts",
   "Foundation capacity building",
@@ -32,7 +32,7 @@ const SUBJECTS = [
 /**
  * Mockup form — validates properly, then shows the success state without
  * sending anything. The real build posts to a route handler that emails Andrea
- * and stores the enquiry.
+ * and stores the inquiry.
  */
 export function ContactForm() {
   const [fields, setFields] = useState<Fields>(EMPTY);
@@ -117,26 +117,61 @@ export function ContactForm() {
         value={fields.organization}
         onChange={set("organization")}
         autoComplete="organization"
+        className="sm:col-span-2"
       />
 
-      <div>
-        <label htmlFor="c-subject" className="mb-2.5 block label text-paper/65">
+      {/*
+        Was a native <select>. On a dark page an OS dropdown renders as system
+        chrome you can't style, so it was the one element that looked bolted on
+        rather than designed — and it hid the range of what Andrea does behind a
+        closed menu.
+
+        Radio inputs styled as chips: everything visible at once, so the list
+        doubles as a quiet statement of her practice areas. Still a real radio
+        group underneath, so arrow-key navigation and screen reader semantics
+        come for free.
+      */}
+      <fieldset className="sm:col-span-2">
+        <legend className="label mb-4 text-paper/65">
           What is this about?
-        </label>
-        <select
-          id="c-subject"
-          value={fields.subject}
-          onChange={(e) => set("subject")(e.target.value)}
-          className="w-full border border-paper/20 bg-olive-950 px-4 py-3.5 text-[0.95rem] text-paper transition-colors focus:border-brass-400 focus:outline-none"
-        >
-          <option value="">Choose one…</option>
+        </legend>
+
+        <div className="flex flex-wrap gap-2.5">
           {SUBJECTS.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
+            <label key={s} className="cursor-pointer">
+              <input
+                type="radio"
+                name="subject"
+                value={s}
+                checked={fields.subject === s}
+                onChange={() => set("subject")(s)}
+                className="peer sr-only"
+              />
+              <span
+                className="block border border-paper/20 px-4 py-2.5 text-sm text-paper/70 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]
+                  hover:border-paper/45 hover:text-paper
+                  peer-checked:border-brass-400 peer-checked:bg-brass-400 peer-checked:font-medium peer-checked:text-olive-950
+                  peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-brass-400"
+              >
+                {s}
+              </span>
+            </label>
           ))}
-        </select>
-      </div>
+        </div>
+
+        {/* Radios can't be unset by clicking, and this field is optional. */}
+        <div className="mt-3.5 h-5">
+          {fields.subject && (
+            <button
+              type="button"
+              onClick={() => set("subject")("")}
+              className="text-xs text-paper/45 underline underline-offset-4 transition-colors hover:text-brass-300"
+            >
+              Clear selection
+            </button>
+          )}
+        </div>
+      </fieldset>
 
       <Field
         label="Message"

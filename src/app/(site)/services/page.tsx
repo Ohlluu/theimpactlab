@@ -52,7 +52,7 @@ export default function ServicesPage() {
               <p className="text-pretty text-xl leading-relaxed text-olive-900/85 md:text-2xl md:leading-relaxed">
                 Not every organization needs a consultant, and not every
                 consultant is the right one. A discovery call is thirty minutes
-                of plain conversation about where you are — and if the honest
+                of plain conversation about where you are. If the honest
                 answer is that you need something I do not offer, I will tell
                 you that and point you somewhere better.
               </p>

@@ -239,7 +239,7 @@ function BlockedDates({
           Block specific dates
         </h3>
         <p className="mt-2.5 text-sm leading-relaxed text-paper/50">
-          Click any date to close it off — a conference, a deadline, a day you
+          Click any date to close it off: a conference, a deadline, a day you
           simply do not want calls. Click again to reopen it.
         </p>
       </header>
@@ -360,7 +360,7 @@ function Vacations({
                   {v.label || "Time off"}
                 </p>
                 <p className="mt-1 text-xs text-paper/45">
-                  {formatLongDate(v.start).replace(/,\s\d{4}$/, "")} —{" "}
+                  {formatLongDate(v.start).replace(/,\s\d{4}$/, "")} to{" "}
                   {formatLongDate(v.end).replace(/,\s\d{4}$/, "")}
                 </p>
               </div>

@@ -78,7 +78,7 @@ export default function DashboardPage() {
       <header className="sticky top-0 z-40 border-b border-paper/10 bg-olive-950/92 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-6 px-6 py-4 md:px-10">
           <div className="flex items-center gap-5">
-            <Link href="/" aria-label="The Impact Lab — home">
+            <Link href="/" aria-label="The Impact Lab, home">
               <Image
                 src="/img/logo-wordmark-white.png"
                 alt="The Impact Lab"
@@ -207,7 +207,7 @@ export default function DashboardPage() {
         {/* --------------------------------------------- Mockup note ---- */}
         <footer className="mt-24 flex flex-wrap items-center justify-between gap-5 border-t border-paper/10 pt-8">
           <p className="max-w-2xl text-xs leading-relaxed text-paper/40">
-            <span className="text-brass-400/90">Mockup —</span> this dashboard
+            <span className="text-brass-400/90">Mockup:</span> this dashboard
             runs on sample data stored in your browser. Changes here do affect
             the live booking page, so feel free to block a date and go look.
             The final build moves all of this to a secure database.

@@ -33,8 +33,8 @@ export function ServicesIndex() {
           </Reveal>
           <Reveal delay={120}>
             <p className="max-w-sm text-pretty text-base leading-relaxed text-paper/60">
-              Four kinds of work. Most engagements draw on two or three — we
-              scope to what your organization can actually absorb.
+              Four kinds of work. Most engagements draw on two or three, scoped
+              to what your organization can actually absorb.
             </p>
           </Reveal>
         </div>

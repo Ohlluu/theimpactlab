@@ -8,7 +8,7 @@ import { contact } from "@/content/placeholder";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with The Impact Lab. Email, phone, and a direct line to Andrea Porter for consulting enquiries, speaking requests, and workshop bookings.",
+    "Get in touch with The Impact Lab. Email, phone, and a direct line to Andrea Porter for consulting inquiries, speaking requests, and workshop bookings.",
 };
 
 export default function ContactPage() {
@@ -116,7 +116,7 @@ export default function ContactPage() {
 
                 <p className="text-xs leading-relaxed text-paper/35">
                   Typical reply time is two business days. For press or speaking
-                  enquiries, please include your date and audience.
+                  inquiries, please include your date and audience.
                 </p>
               </div>
             </Reveal>

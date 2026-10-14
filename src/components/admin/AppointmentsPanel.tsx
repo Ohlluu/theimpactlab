@@ -183,7 +183,7 @@ export function AppointmentsPanel({
                         <p className="flex-1 text-pretty text-sm leading-relaxed text-paper/70">
                           {b.notes || (
                             <span className="text-paper/30">
-                              Nothing written — they left this blank.
+                              Nothing written. They left this blank.
                             </span>
                           )}
                         </p>

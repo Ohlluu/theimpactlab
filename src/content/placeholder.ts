@@ -58,7 +58,7 @@ export const stats = [
 export const testimonials = [
   {
     quote:
-      "We had been talking about a major gifts program for three years. Andrea got us to a working pipeline in four months — not because she handed us a template, but because she made us decide who we were actually going to ask.",
+      "We had been talking about a major gifts program for three years. Andrea got us to a working pipeline in four months. Not because she handed us a template, but because she made us decide who we were actually going to ask.",
     role: "Executive Director",
     org: "Youth development organization",
     location: "Chicago, IL",
@@ -116,7 +116,7 @@ export const appointmentTypes: AppointmentType[] = [
     duration: 30,
     priceNote: "Complimentary",
     description:
-      "A first conversation about where your organization is and what you are trying to build. No preparation needed — come as you are.",
+      "A first conversation about where your organization is and what you are trying to build. No preparation needed. Come as you are.",
     bestFor: "Start here if we have not spoken before",
   },
   {

@@ -17,7 +17,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL("https://theimpactlab.co"),
   title: {
-    default: "The Impact Lab — Fundraising Strategy for Nonprofits and Foundations",
+    default: "The Impact Lab · Fundraising Strategy for Nonprofits and Foundations",
     template: "%s · The Impact Lab",
   },
   description:
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "The Impact Lab",
-    title: "The Impact Lab — Fundraising Strategy for Nonprofits and Foundations",
+    title: "The Impact Lab · Fundraising Strategy for Nonprofits and Foundations",
     description:
       "Strategy and implementation for mission-driven organizations building the capacity to raise more.",
   },

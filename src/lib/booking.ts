@@ -282,7 +282,7 @@ export function toICS(booking: Booking): string {
     `DTSTAMP:${stamp(new Date(booking.createdAt))}`,
     `DTSTART:${stamp(start)}`,
     `DTEND:${stamp(end)}`,
-    `SUMMARY:${escape(`${booking.typeName} — The Impact Lab`)}`,
+    `SUMMARY:${escape(`${booking.typeName} with Andrea Porter`)}`,
     `DESCRIPTION:${escape(
       `${booking.typeName} with Andrea Porter, The Impact Lab.\n\nBooked for ${booking.name}${
         booking.organization ? ` (${booking.organization})` : ""

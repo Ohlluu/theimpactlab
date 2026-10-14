@@ -17,7 +17,7 @@ export function NotificationsPanel({ log }: { log: SmsLogEntry[] }) {
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-paper/55">
           Every new booking sends a text to your phone with the client&rsquo;s
-          name, organization, and the time they chose — so you know before you
+          name, organization, and the time they chose, so you know before you
           open your laptop.
         </p>
 
@@ -40,7 +40,7 @@ export function NotificationsPanel({ log }: { log: SmsLogEntry[] }) {
         </dl>
 
         <p className="mt-7 border-l-2 border-brass-400/40 pl-4 text-xs leading-relaxed text-paper/45">
-          <span className="text-brass-400/90">Mockup note —</span> these are
+          <span className="text-brass-400/90">Mockup note:</span> these are
           sample messages. Live SMS is wired up during final development.
         </p>
       </div>

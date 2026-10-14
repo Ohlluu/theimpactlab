@@ -54,7 +54,7 @@ export function SiteHeader() {
           <Link
             href="/"
             className="relative block shrink-0"
-            aria-label="The Impact Lab — home"
+            aria-label="The Impact Lab, home"
           >
             <Image
               src="/img/logo-wordmark-white.png"

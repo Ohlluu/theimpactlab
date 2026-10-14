@@ -17,7 +17,7 @@ const steps = [
   {
     marker: "First",
     title: "Understand what is actually happening",
-    body: "Your revenue mix, your team's real capacity, and the donor conversations that are — and are not — happening. No assessment theatre. We look at the few things that explain the rest.",
+    body: "Your revenue mix, your team's real capacity, and which donor conversations are actually happening. No assessment theater. We look at the few things that explain the rest.",
   },
   {
     marker: "Then",

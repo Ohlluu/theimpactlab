@@ -150,7 +150,7 @@ export const services: Service[] = [
     id: "board-development",
     family: "capacity",
     title: "Board Development and Engagement",
-    summary: "Board members who understand the role — and participate in it.",
+    summary: "Board members who understand the role and actually participate in it.",
     body: "Help board members understand their roles and participate confidently in advancing the mission. Through training, facilitated discussions, and practical tools, we strengthen governance, clarify expectations, and support meaningful fundraising involvement.",
   },
   {
