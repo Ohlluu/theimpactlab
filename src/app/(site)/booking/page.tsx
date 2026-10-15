@@ -15,20 +15,28 @@ export default async function BookingPage({ searchParams }: PageProps<"/booking"
 
   return (
     <>
-      <PageHeader
-        eyebrow="Book a Consultation"
-        title={
-          <>
-            Find a time
-            <br />
-            that <span className="text-brass-400">works</span>.
-          </>
-        }
-        lede={`Pick an appointment type, choose an open slot, and tell Andrea a little about your organization. Times shown in ${availability.timezoneLabel}.`}
-      />
-      <section className="relative field-deep">
-        <BookingFlow initialTopic={topic} />
-      </section>
+      {/*
+        One field across the title block and the booking flow, rather than a
+        background on each. Two stacked `.field-deep` sections each ran their
+        own light-to-dark ramp and drew a hard line where they met.
+      */}
+      <div className="field-page">
+        <PageHeader
+          transparent
+          eyebrow="Book a Consultation"
+          title={
+            <>
+              Find a time
+              <br />
+              that <span className="text-brass-400">works</span>.
+            </>
+          }
+          lede={`Pick an appointment type, choose an open slot, and tell Andrea a little about your organization. Times shown in ${availability.timezoneLabel}.`}
+        />
+        <section className="relative">
+          <BookingFlow initialTopic={topic} />
+        </section>
+      </div>
     </>
   );
 }
