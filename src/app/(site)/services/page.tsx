@@ -14,23 +14,37 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Consulting Services"
-        title={
-          <>
-            Seven ways
-            <br />
-            we <span className="text-brass-400">work together</span>.
-          </>
-        }
-        lede="Most engagements draw on two or three of these. We scope to what your organization can genuinely absorb, not to a package."
-      />
+      {/*
+        The title block and the practice areas share one field rather than
+        carrying a background each. Two stacked `.field-deep` sections each ran
+        their own light-to-dark ramp, so the darkest point of the first met the
+        lightest point of the second and drew a hard line across the page.
 
-      <section className="relative field-deep pb-24 md:pb-32 lg:pb-40">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
-          <ServicesAccordion services={services} />
-        </div>
-      </section>
+        The boundary further down, where this meets the sand block, is left
+        crisp on purpose: a hard edge between two genuinely different surfaces
+        reads as a decision, where the same edge between two shades of one
+        surface just reads as a mistake.
+      */}
+      <div className="field-page">
+        <PageHeader
+          transparent
+          eyebrow="Consulting Services"
+          title={
+            <>
+              Seven ways
+              <br />
+              we <span className="text-brass-400">work together</span>.
+            </>
+          }
+          lede="Most engagements draw on two or three of these. We scope to what your organization can genuinely absorb, not to a package."
+        />
+
+        <section className="relative pb-24 md:pb-32 lg:pb-40">
+          <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-16">
+            <ServicesAccordion services={services} />
+          </div>
+        </section>
+      </div>
 
       {/* Fit check */}
       <section className="border-t border-olive-950/10 field-sand py-24 text-olive-950 md:py-32">

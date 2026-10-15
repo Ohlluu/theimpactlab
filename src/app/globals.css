@@ -152,6 +152,29 @@
     );
   }
 
+  /* A page-level field, spanning several sections at once.
+     ----------------------------------------------------------------
+     `.field-deep` ramps light-to-dark across whatever element carries
+     it. That works for a single section, but when two of them sit
+     next to each other the ramp finishes dark and immediately
+     restarts light, leaving a hard bright line at the join.
+
+     This puts the ramp on a wrapper around the whole dark run
+     instead, and — crucially — measures the stops in `rem` rather
+     than `%`, so the light falls off over roughly the first screen
+     and then holds flat for however tall the page happens to be.
+     One light source per page, nothing to seam. */
+  .field-page {
+    background-color: var(--color-olive-950);
+    background-image: linear-gradient(
+      180deg,
+      #1e2414 0rem,
+      #1a1f11 22rem,
+      #171b0e 46rem
+    );
+    background-repeat: no-repeat;
+  }
+
   /* Brand pattern. Sits under content, over the tonal field. */
   .pattern-bracket {
     background-image: url("/img/bracket-tile-light.svg");

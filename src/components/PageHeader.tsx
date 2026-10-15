@@ -10,14 +10,25 @@ export function PageHeader({
   title,
   lede,
   children,
+  transparent = false,
 }: {
   eyebrow: string;
   title: ReactNode;
   lede?: ReactNode;
   children?: ReactNode;
+  /**
+   * Skip this header's own background, because a parent is painting one
+   * continuous field across it and the section below. Without this, the two
+   * gradients butt up against each other and leave a visible line at the join.
+   */
+  transparent?: boolean;
 }) {
   return (
-    <section className="relative isolate overflow-hidden field-deep pt-32 md:pt-40 lg:pt-48">
+    <section
+      className={`relative isolate overflow-hidden pt-32 md:pt-40 lg:pt-48 ${
+        transparent ? "" : "field-deep"
+      }`}
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-16 hidden h-96 w-96 border-r border-t border-paper/[0.07] lg:block"
