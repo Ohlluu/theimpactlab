@@ -97,12 +97,12 @@ export const families = [
   {
     id: "capacity",
     name: "Capacity",
-    blurb: "Building the muscle inside the organization and its board.",
+    blurb: "Strengthening the organization and its board.",
   },
   {
     id: "people",
     name: "People",
-    blurb: "Supporting the individuals carrying the goal.",
+    blurb: "Supporting the people doing the work.",
   },
   {
     id: "systems",

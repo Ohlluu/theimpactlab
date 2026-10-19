@@ -17,16 +17,16 @@ const steps = [
   {
     marker: "First",
     title: "Understand what is actually happening",
-    body: "Your revenue mix, your team's real capacity, and which donor conversations are actually happening. No assessment theater. We look at the few things that explain the rest.",
+    body: "Your revenue mix, your team's real capacity, and which donor conversations are actually happening. We look at the few things that explain the rest, not everything at once.",
   },
   {
     marker: "Then",
     title: "Clarify priorities and name owners",
-    body: "A focused plan with responsibilities and timelines attached to specific people. Specificity is the entire difference between a fundraising plan and a fundraising wish.",
+    body: "A focused plan with responsibilities and timelines attached to specific people. If nobody's name is on a task, it does not get done.",
   },
   {
     marker: "After that",
-    title: "Build the habit, not the dependency",
+    title: "Build habits your team can keep",
     body: "Tools, coaching, and systems your team can run without me. The measure of good consulting is what still works two years after the engagement ends.",
   },
 ] as const;
@@ -49,12 +49,9 @@ export function Approach() {
                 How we work
               </p>
               <h2 className="mt-8 text-[clamp(2.25rem,5vw,3.75rem)] text-paper">
-                Strategy that
+                Ideas into
                 <br />
-                survives contact
-                <br />
-                with a{" "}
-                <span className="text-brass-400">Tuesday</span>.
+                <span className="text-brass-400">consistent action</span>.
               </h2>
               <p className="mt-8 max-w-md text-pretty text-base leading-relaxed text-paper/60 md:text-lg md:leading-relaxed">
                 Every engagement reflects the people doing the work, the

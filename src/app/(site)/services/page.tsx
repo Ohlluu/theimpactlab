@@ -56,9 +56,9 @@ export default function ServicesPage() {
                 Is this a fit?
               </p>
               <h2 className="mt-8 text-[clamp(2rem,4.5vw,3.5rem)]">
-                The honest
+                You will get
                 <br />
-                answer, early.
+                a straight answer.
               </h2>
             </Reveal>
 
