@@ -17,16 +17,16 @@ const steps = [
   {
     marker: "First",
     title: "Understand what is actually happening",
-    body: "Your revenue mix, your team's real capacity, and which donor conversations are actually happening. We look at the few things that explain the rest, not everything at once.",
+    body: "Your revenue mix, your team's real capacity, and which donor conversations are actually happening. No assessment theater. We look at the few things that explain the rest.",
   },
   {
     marker: "Then",
     title: "Clarify priorities and name owners",
-    body: "A focused plan with responsibilities and timelines attached to specific people. If nobody's name is on a task, it does not get done.",
+    body: "A focused plan with responsibilities and timelines attached to specific people. Specificity is the entire difference between a fundraising plan and a fundraising wish.",
   },
   {
     marker: "After that",
-    title: "Build habits your team can keep",
+    title: "Build the habit, not the dependency",
     body: "Tools, coaching, and systems your team can run without me. The measure of good consulting is what still works two years after the engagement ends.",
   },
 ] as const;
